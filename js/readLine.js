@@ -17,15 +17,17 @@
 
 	function onLoaded(event) {
     var reqStr = "";
-    reqStr = xmlStartStr();
-    console.log(reqStr);
 
     //ファイルから取得したテキストが格納される
 		var str = event.target.result;
     var strArray = new Array(10);
     //\nでsplitをかけ、配列に格納
     strArray = str.split("\n");
+    //ファイルのデータが空だったら処理を中止
+    if(strArray.length != 0) {
 
+    }
+    reqStr = xmlStartStr();
     //配列の個数繰り返す
     for(var i=0; i < strArray.length; i++) {
       var addNum = 0;
@@ -41,6 +43,7 @@
 
     //textFieldに書き込む
 		document.querySelector("#msg").innerHTML = reqStr;
+    setBlobUrl("download", $("#msg").val());
 	}
 
 	function onError(event) {

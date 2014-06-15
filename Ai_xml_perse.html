@@ -10,17 +10,11 @@
     <body>
       <h1>Aiのxmlデータを生成</h1>
       <p>CSVデータは１０個以下で入れて下さい。</p>
-      <textarea id="msg" cols="30" rows="10"></textarea>
+      <textarea id="msg" Style="display:none;"></textarea>
       <hr>
       <input type="file" onchange="dochange(event);">
         <div id="contents_sample_wrap">
-            <ul>
-                <li class="text_box">ファイルを保存します。</li>
-            </ul>
-            <input type="button" value="テキストを変更" id="count" /><!--クリックしたときにtext()
-            を実行-->
-            <input type="button" value="出力！" id="export" />
-            <a id="download" target="_blank">ダウンロード（IEでは、右クリック＞対象をファイルに保存）</a>
+            <a id="download" target="_blank" Style="display:none;" >ダウンロード</a>
         </div>
     </body>
 </html>
